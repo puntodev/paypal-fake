@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2497071d025117c75b172aa141ba3fe7",
+    "content-hash": "546b5a6568f33c54f83a5a2d16f53b09",
     "packages": [
         {
             "name": "brick/math",
@@ -2896,16 +2896,20 @@
         },
         {
             "name": "puntodev/paypal",
-            "version": "dev-master",
+            "version": "v5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/puntodev/paypal.git",
+                "reference": "42a06027bdde9283faebf16fb60a4c2068ef34fb"
+            },
             "dist": {
-                "type": "path",
-                "url": "../paypal",
-                "reference": "a622bc957e6cfbbf39ef80a2f9a83ea98c7ccd35"
+                "type": "zip",
+                "url": "https://api.github.com/repos/puntodev/paypal/zipball/42a06027bdde9283faebf16fb60a4c2068ef34fb",
+                "reference": "42a06027bdde9283faebf16fb60a4c2068ef34fb",
+                "shasum": ""
             },
             "require": {
-                "ext-json": "*",
-                "guzzlehttp/guzzle": "^7.10",
-                "illuminate/support": "^12.53",
+                "illuminate/support": "^12.53 || ^13.0",
                 "php": ">=8.4 <9.0"
             },
             "require-dev": {
@@ -2915,12 +2919,12 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "Puntodev\\Payments\\PayPalServiceProvider"
-                    ],
                     "aliases": {
                         "Paypal": "Puntodev\\Payments\\PayPalFacade"
-                    }
+                    },
+                    "providers": [
+                        "Puntodev\\Payments\\PayPalServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -2928,19 +2932,7 @@
                     "Puntodev\\Payments\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test-coverage": [
-                    "vendor/bin/phpunit --coverage-html coverage"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2957,9 +2949,10 @@
                 "paypal",
                 "puntodev"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/puntodev/paypal/tree/v5"
+            },
+            "time": "2026-03-28T22:31:38+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -8717,9 +8710,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "puntodev/paypal": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
