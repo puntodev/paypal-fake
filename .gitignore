@@ -1,0 +1,19 @@
+.tmp/
+build
+docs
+vendor
+coverage
+.phpunit.result.cache
+.phpunit.cache
+.env
+
+## AI
+.cursor/
+.junie/
+.ai/
+AGENTS.md
+CLAUDE.md
+.mcp.json
+boost.json
+.vscode/mcp.json
+.github/copilot-instructions.md
