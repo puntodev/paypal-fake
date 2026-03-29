@@ -4,8 +4,8 @@ namespace Puntodev\PaymentsFake;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Uri;
 
 class FakeCheckoutController extends Controller
@@ -62,7 +62,7 @@ class FakeCheckoutController extends Controller
         if ($providerId) {
             $webhookUrl = url("/paypal/webhook/$providerId");
 
-            Http::post($webhookUrl, [
+            $webhookPayload = json_encode([
                 'event_type' => 'CHECKOUT.ORDER.APPROVED',
                 'resource' => [
                     'id' => $orderId,
@@ -95,6 +95,10 @@ class FakeCheckoutController extends Controller
                     ],
                 ],
             ]);
+
+            app()->handle(
+                HttpRequest::create($webhookUrl, 'POST', [], [], [], ['CONTENT_TYPE' => 'application/json'], $webhookPayload)
+            );
         }
 
         $redirectUrl = Uri::of($returnUrl)

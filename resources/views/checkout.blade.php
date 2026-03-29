@@ -232,19 +232,19 @@
 
         <div class="actions">
             <form method="POST" action="{{ url("/paypal-fake/checkout/$orderId/approve") }}">
-                <button type="submit" class="btn-pay" dusk="fake-paypal-pay">Completar compra</button>
+                <button type="submit" class="btn-pay" dusk="fake-pay">Completar compra</button>
             </form>
 
             <form method="POST" action="{{ url("/paypal-fake/checkout/$orderId/decline") }}">
-                <button type="submit" class="btn-decline" dusk="fake-paypal-decline">Rechazar pago</button>
+                <button type="submit" class="btn-decline" dusk="fake-decline">Rechazar pago</button>
             </form>
 
-            <a href="{{ url("/paypal-fake/checkout/$orderId/cancel") }}" class="cancel-link" dusk="fake-paypal-cancel">
+            <a href="{{ url("/paypal-fake/checkout/$orderId/cancel") }}" class="cancel-link" dusk="fake-cancel">
                 Cancelar y volver al {{ $brandName }}
             </a>
         </div>
     </div>
 
-    <div class="fake-banner">Fake PayPal Checkout (testing)</div>
+    <div class="fake-banner">Fake Checkout (testing)</div>
 </body>
 </html>
