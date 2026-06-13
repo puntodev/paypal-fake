@@ -13,7 +13,7 @@ class PayPalFakeApiTest extends TestCase
     {
         $client = app(PayPal::class)->defaultClient();
 
-        $order = (new OrderBuilder())
+        $order = (new OrderBuilder)
             ->externalId('test-123')
             ->currency('USD')
             ->amount(25.00)
@@ -106,7 +106,7 @@ class PayPalFakeApiTest extends TestCase
     {
         $client = app(PayPal::class)->defaultClient();
 
-        $order = (new OrderBuilder())
+        $order = (new OrderBuilder)
             ->externalId('discount-test')
             ->currency('USD')
             ->amount(50.00)

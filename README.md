@@ -1,6 +1,6 @@
 # paypal-fake
 
-A fake PayPal API server for testing Laravel applications. It replaces the real `puntodev/paypal` client with a mock implementation that simulates the full checkout flow without hitting the PayPal API.
+A fake PayPal API server for testing Laravel applications. It replaces the real PayPal client with a mock implementation that simulates the full checkout flow without hitting the PayPal API.
 
 ## Installation
 
@@ -113,8 +113,33 @@ Start your Laravel app with `PAYPAL_USE_FAKE=true` and navigate to `/paypal-fake
 | `PayPalFake::getCalls($method)` | Get recorded calls, optionally filtered by method |
 | `PayPalFake::reset()` | Clear all stored state and recorded calls |
 
+## Development
+
+Code style is enforced with [Laravel Pint](https://laravel.com/docs/pint) (`laravel`
+preset, see `pint.json`). The test suite is fully isolated — it never reaches the network,
+so no PayPal credentials are required.
+
+```bash
+composer install
+composer test            # run the test suite (vendor/bin/phpunit)
+composer test-coverage   # generate an HTML coverage report under ./coverage
+composer lint            # check code style (vendor/bin/pint --test) — this is what CI runs
+composer format          # fix code style (vendor/bin/pint)
+```
+
+Please run `composer format` before opening a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md)
+for the full contribution guide.
+
 ## Requirements
 
 - PHP >= 8.4
-- Laravel 12+
-- `puntodev/paypal` ^4.1.3
+- Laravel 13+
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the list of changes per version.
+
+Releases are cut from GitHub's **"Generate release notes"** button (grouping configured
+in `.github/release.yml`). When a release is published, the
+[`update-changelog`](.github/workflows/update-changelog.yml) workflow writes its notes
+into `CHANGELOG.md` and commits them back to `main`.
