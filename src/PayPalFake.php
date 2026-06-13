@@ -13,12 +13,12 @@ class PayPalFake implements PayPal
 
     public function defaultClient(): PayPalApi
     {
-        return new PayPalFakeApi();
+        return new PayPalFakeApi;
     }
 
     public function withCredentials(string $clientId, string $clientSecret): PayPalApi
     {
-        return new PayPalFakeApi();
+        return new PayPalFakeApi;
     }
 
     public static function storeOrder(string $id, array $order): void

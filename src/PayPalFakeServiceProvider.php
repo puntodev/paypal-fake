@@ -15,7 +15,7 @@ class PayPalFakeServiceProvider extends ServiceProvider
 
         if (config('paypal-fake.enabled')) {
             $this->app->singleton(PayPal::class, function () {
-                return new PayPalFake();
+                return new PayPalFake;
             });
             $this->app->alias(PayPal::class, 'paypal');
         }
