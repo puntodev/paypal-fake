@@ -9,7 +9,18 @@ Released entries below are maintained automatically from the GitHub release note
 (see `.github/workflows/update-changelog.yml`); the `Unreleased` section tracks the
 range of changes on `main` that have not been released yet.
 
-## [Unreleased](https://github.com/puntodev/paypal-fake/compare/1.0.0...HEAD)
+## [Unreleased](https://github.com/puntodev/paypal-fake/compare/1.0.1...HEAD)
+
+## [1.0.1](https://github.com/puntodev/paypal-fake/compare/1.0.0...1.0.1) - 2026-06-28
+
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+### What's Changed
+
+#### Other Changes
+
+* chore(deps): update dependencies & bump puntodev/paypal to 6.0.1 by @marianogoldman in https://github.com/puntodev/paypal-fake/pull/4
+
+**Full Changelog**: https://github.com/puntodev/paypal-fake/compare/1.0.0...1.0.1
 
 ## [1.0.0](https://github.com/puntodev/paypal-fake/compare/0.0.2...1.0.0) - 2026-06-13
 
