@@ -9,7 +9,26 @@ Released entries below are maintained automatically from the GitHub release note
 (see `.github/workflows/update-changelog.yml`); the `Unreleased` section tracks the
 range of changes on `main` that have not been released yet.
 
-## [Unreleased](https://github.com/puntodev/paypal-fake/compare/1.0.1...HEAD)
+## [Unreleased](https://github.com/puntodev/paypal-fake/compare/1.0.2...HEAD)
+
+## [1.0.2](https://github.com/puntodev/paypal-fake/compare/1.0.1...1.0.2) - 2026-10-11
+
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+### What's Changed
+
+#### 🧰 Maintenance & Dependencies
+
+* chore(deps): bump the github-actions group with 2 updates by @dependabot[bot] in https://github.com/puntodev/paypal-fake/pull/6
+
+#### Other Changes
+
+* chore: enable Dependabot version updates by @marianogoldman in https://github.com/puntodev/paypal-fake/pull/5
+
+### New Contributors
+
+* @dependabot[bot] made their first contribution in https://github.com/puntodev/paypal-fake/pull/6
+
+**Full Changelog**: https://github.com/puntodev/paypal-fake/compare/1.0.1...1.0.2
 
 ## [1.0.1](https://github.com/puntodev/paypal-fake/compare/1.0.0...1.0.1) - 2026-06-28
 
