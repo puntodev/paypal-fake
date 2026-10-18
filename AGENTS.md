@@ -12,7 +12,7 @@ published to Packagist and pulled in as a `--dev` dependency from Laravel apps a
 suites.
 
 - **Namespace:** `Puntodev\PaymentsFake\` (PSR-4, mapped to `src/`)
-- **PHP:** `>=8.4 <9.0`
+- **PHP:** `^8.5`
 - **Main dependencies:** `illuminate/support` (`^13.0`, Laravel 13+) and the real PayPal
   client package this one fakes (its public interfaces live under the `Puntodev\Payments\`
   namespace).
@@ -71,7 +71,7 @@ composer format          # vendor/bin/pint (fix style)
 - `phpunit.xml.dist` forces `SANDBOX_GATEWAYS=true` and `PAYPAL_USE_FAKE=true`.
 - ✅ Unlike the real PayPal client, these tests are **fully isolated** — they never reach
   the network, so no credentials are needed in CI.
-- CI: `.github/workflows/php.yml` runs on PHP 8.4 on every push/PR to `main`, including a
+- CI: `.github/workflows/php.yml` runs on PHP 8.5 on every push/PR to `main`, including a
   Pint code-style check.
 
 ## Conventions
