@@ -20,7 +20,7 @@
     "require": {
         "php": "^8.5",
         "illuminate/support": "^13.0",
-        "puntodev/paypal": "^6.0"
+        "puntodev/paypal": "^7.0"
     },
     "require-dev": {
         "laravel/pint": "^1.29",
